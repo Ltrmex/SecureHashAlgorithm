@@ -55,9 +55,9 @@ void sha256() {
 	};
 
 	// Message schedule (Section 6.2).
-	uint32_t W[64]
+	uint32_t W[64];
 	// Working variables (Section 6.2).
-	uint32_t a,b,c,d,e,f,g,h;
+	uint32_t a ,b ,c ,d ,e ,f ,g ,h;
 	// Two temporary variables.
 	uint32_t T1, T2;
 
@@ -118,8 +118,8 @@ void sha256() {
 		H[6] = g + H[6];
 		H[7] = h + H[7];
 
-		printf("%x %x %x %x %x %x %x %x\n", H[0], H[1], H[2], H[3], H[4], H[5], H[6], H[7]);
 	}//for
+	printf("%x %x %x %x %x %x %x %x\n", H[0], H[1], H[2], H[3], H[4], H[5], H[6], H[7]);
 }//shar256()
 
 // See sections 3.2 for definitions.
