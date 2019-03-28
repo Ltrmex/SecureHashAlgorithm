@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
 
     while(!feof(f)) {
         nobytes = fread(M.e, 1, 64, f);
-        printf("%11\n", nobytes);
+        printf("%11u\n", nobytes);
     }//while
 
     fclose(f);
