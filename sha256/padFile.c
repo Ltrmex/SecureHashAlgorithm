@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     while(!feof(f)) {
         nobytes = fread(M.e, 1, 64, f);
         printf("Read: %211u bytes\n", nobytes);
-        nobits nobits + (nobytes * 8);
+	nobits = nobits + (nobytes * 8);
 
         if(nobytes < 56) {
             printf("I have found a block with less than 56 bytes!\n");
