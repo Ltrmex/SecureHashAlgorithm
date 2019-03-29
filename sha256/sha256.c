@@ -153,7 +153,7 @@ void sha256(FILE *msgf) {
 		H[7] = h + H[7];
 
 	}//for
-	printf("%x %x %x %x %x %x %x %x\n", H[0], H[1], H[2], H[3], H[4], H[5], H[6], H[7]);
+	printf("%08x %08x %08x %08x %08x %08x %08x %08x\n", H[0], H[1], H[2], H[3], H[4], H[5], H[6], H[7]);
 }//shar256()
 
 // See sections 3.2 for definitions.
