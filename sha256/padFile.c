@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdint.h>
 
+// Represents a message block.
 union msgblock {
     uint8_t e[64];
     uint32_t t[16];
     uint64_t s[8];
 };
 
+// A flag for where we are in reading the file.
 enum status {READ, PAD0, PAD1, FINISH};
 
 int main(int argc, char *argv[]) {
@@ -55,7 +57,7 @@ int main(int argc, char *argv[]) {
 
         M.s[7] = nobits;
     }//if
-    
+
     if (S == PAD1)
         M.e[0] = 0x80; 
 
